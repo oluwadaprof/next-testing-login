@@ -10,15 +10,16 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    try {
-      const { data } = await axios.post("/api/register", {
-        name,
-        email,
-        password,
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    console.log( name, email, password)
+    // try {
+    //   const { data } = await axios.post("/api/register", {
+    //     name,
+    //     email,
+    //     password,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

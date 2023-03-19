@@ -3,11 +3,11 @@ describe("Register Page", () => {
     cy.visit("http://localhost:3000/register");
   });
 
-  context('header', ()=>{
-    it('contains register',()=>{
-        cy.get('h1.mb-4').contains('Register')
-    })
-  })
+  context("header", () => {
+    it("contains register", () => {
+      cy.get("h1.mb-4").contains("Register");
+    });
+  });
 
   context("input section", () => {
     it("gets the input name form", () => {
@@ -15,9 +15,7 @@ describe("Register Page", () => {
       cy.getByData("email").type("tobi@gmail.com");
       cy.getByData("password").type("12345");
       cy.get(".btn").click();
-    //   cy.location("pathname").should("eq",
-    //   'http://localhost:3000/login'
-    //   )
+      cy.visit("http://localhost:3000/login");
     });
   });
 });
